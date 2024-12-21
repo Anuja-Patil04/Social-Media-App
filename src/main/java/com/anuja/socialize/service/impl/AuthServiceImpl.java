@@ -1,8 +1,18 @@
 package com.anuja.socialize.service.impl;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.anuja.socialize.entity.Role;
+import com.anuja.socialize.entity.User;
+import com.anuja.socialize.exception.BlogAPIException;
+import com.anuja.socialize.payload.LoginDto;
+import com.anuja.socialize.payload.RegisterDto;
 import com.anuja.socialize.repository.RoleRepository;
 import com.anuja.socialize.repository.UserRepository;
 import com.anuja.socialize.security.service.JwtTokenProvider;

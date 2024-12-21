@@ -6,8 +6,9 @@ import com.anuja.socialize.exception.BlogAPIException;
 import com.anuja.socialize.exception.ResourceNotFoundException;
 import com.anuja.socialize.repository.CommentRepository;
 import com.anuja.socialize.repository.PostRepository;
-import com.springboot.blog.payload.CommentDto;
-import com.springboot.blog.service.CommentService;
+import com.anuja.socialize.payload.CommentDto;
+import com.anuja.socialize.payload.PostDto;
+import com.anuja.socialize.service.CommentService;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -33,7 +34,7 @@ public class CommentServiceImpl implements CommentService {
         Comment comment = mapToEntity(commentDto);
 
         // retrieve post entity by id
-        Post post = postRepository.findById(postId).orElseThrow(
+        PostDto post = postRepository.findById(postId).orElseThrow(
                 () -> new ResourceNotFoundException("Post", "id", postId));
 
         // set post to comment entity
@@ -57,7 +58,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public CommentDto getCommentById(Long postId, Long commentId) {
         // retrieve post entity by id
-        Post post = postRepository.findById(postId).orElseThrow(
+        PostDto post = postRepository.findById(postId).orElseThrow(
                 () -> new ResourceNotFoundException("Post", "id", postId));
 
         // retrieve comment by id
@@ -74,7 +75,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public CommentDto updateComment(Long postId, long commentId, CommentDto commentRequest) {
         // retrieve post entity by id
-        Post post = postRepository.findById(postId).orElseThrow(
+        PostDto post = postRepository.findById(postId).orElseThrow(
                 () -> new ResourceNotFoundException("Post", "id", postId));
 
         // retrieve comment by id
@@ -96,7 +97,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public void deleteComment(Long postId, Long commentId) {
         // retrieve post entity by id
-        Post post = postRepository.findById(postId).orElseThrow(
+        PostDto post = postRepository.findById(postId).orElseThrow(
                 () -> new ResourceNotFoundException("Post", "id", postId));
 
         // retrieve comment by id

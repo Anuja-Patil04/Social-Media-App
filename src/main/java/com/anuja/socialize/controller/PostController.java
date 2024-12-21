@@ -126,7 +126,7 @@ public class PostController {
     // http://localhost:8080/api/posts/category/3
     @GetMapping("/category/{id}")
     public ResponseEntity<List<PostDto>> getPostsByCategory(@PathVariable("id") Long categoryId){
-        List<PostDto> postDtos = PostService.getPostsByCategory(categoryId);
+        List<PostDto> postDtos = postService.getPostsByCategory(categoryId);
         return ResponseEntity.ok(postDtos);
     }
 }
