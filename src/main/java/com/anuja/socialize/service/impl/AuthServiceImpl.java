@@ -1,7 +1,11 @@
 package com.anuja.socialize.service.impl;
 
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.stereotype.Service;
 
+import com.anuja.socialize.repository.RoleRepository;
+import com.anuja.socialize.repository.UserRepository;
+import com.anuja.socialize.security.service.JwtTokenProvider;
 import com.anuja.socialize.service.AuthService;
 
 import java.util.HashSet;

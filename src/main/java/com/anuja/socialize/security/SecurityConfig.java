@@ -1,4 +1,4 @@
-package com.eshwarprasad.socialize.config;
+package com.anuja.socialize.security;
 
 import com.anuja.socialize.security.JwtAuthenticationEntryPoint;
 import com.anuja.socialize.security.JwtAuthenticationFilter;
@@ -30,9 +30,9 @@ public class SecurityConfig {
 
     private UserDetailsService userDetailsService;
 
-    private JwtAuthenticationEntryPoint authenticationEntryPoint;
+    private com.anuja.socialize.security.service.JwtAuthenticationEntryPoint authenticationEntryPoint;
 
-    private JwtAuthenticationFilter authenticationFilter;
+    private com.anuja.socialize.security.service.JwtAuthenticationFilter authenticationFilter;
 
     public SecurityConfig(UserDetailsService userDetailsService,
                           JwtAuthenticationEntryPoint authenticationEntryPoint,

@@ -1,8 +1,8 @@
 package com.anuja.socialize.service.impl;
 
 import com.anuja.socialize.entity.Category;
+import com.anuja.socialize.exception.ResourceNotFoundException;
 import com.anuja.socialize.repository.CategoryRepository;
-import com.springboot.blog.exception.ResourceNotFoundException;
 import com.springboot.blog.payload.CategoryDto;
 import com.springboot.blog.service.CategoryService;
 import org.modelmapper.ModelMapper;
