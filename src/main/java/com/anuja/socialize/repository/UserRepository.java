@@ -1,7 +1,8 @@
 package com.anuja.socialize.repository;
 
-import com.springboot.blog.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.anuja.socialize.entity.User;
 
 import java.util.Optional;
 

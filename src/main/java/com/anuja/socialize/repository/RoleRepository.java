@@ -1,7 +1,8 @@
 package com.anuja.socialize.repository;
 
-import com.springboot.blog.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.anuja.socialize.entity.Role;
 
 import java.util.Optional;
 

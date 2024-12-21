@@ -1,9 +1,9 @@
 package com.anuja.socialize.service.impl;
 
+import com.anuja.socialize.entity.Category;
+import com.anuja.socialize.entity.Post;
 import com.anuja.socialize.repository.CategoryRepository;
 import com.anuja.socialize.repository.PostRepository;
-import com.springboot.blog.entity.Category;
-import com.springboot.blog.entity.Post;
 import com.springboot.blog.exception.ResourceNotFoundException;
 import com.springboot.blog.payload.PostDto;
 import com.springboot.blog.payload.PostResponse;
